@@ -1,0 +1,15 @@
+.login-form{
+    width: 340px;
+    margin: 50px auto;
+    font-size: 15px;
+    /* center */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    padding: 15px;
+    height: 50vh;
+    box-sizing: border-box;
+}
