@@ -10,13 +10,17 @@
     <!-- login form -->
     <div class="login-form">
         <h1>Login</h1>
-        <form  >
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
+        <div  >
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password"  id="password" name="password" placeholder="Password" required>
 
-            <button type="submit" name="login">Login</button>
-            <div id="error"></div>
-        </form>
+            <button id="loginBtn" name="login">Login</button>
+            <div id="error-area"></div>
+        </div>
+
+        <div class="linktofav">
+            <a href="/tomer-elad-noa-matan-eden/fav.jsp">go to fav</a>
+        </div>
     <script src="indexd.js"></script>
 </body>
 </html>

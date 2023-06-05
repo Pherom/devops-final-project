@@ -7,36 +7,41 @@
 <button type="submit" name="login">Login</button>
 </form> */}
 
-const username = document.getElementById('username');
-const password = document.getElementById('password');
-const form = document.getElementById('form');
-const errorElement = document.getElementById('error');
+
+const errorElement = document.getElementById('error-area');
 
 rightUsername = "admin";
 rightPassword = "password";
 
 
-form.addEventListener('submit', (e) => {
-    let messages = []
-    if (username.value === '' || username.value == null) {
-        messages.push('Username is required')
+const username = document.getElementById('username');
+const password = document.getElementById('password');
+
+const btn = document.getElementById('loginBtn');
+let errors = []
+errorElement.style.color = "red";
+
+btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    if(username.value === ""){
+        errors.push("Username is required");
+    }
+    if(password.value === ""){
+        errors.push("Password is required");
     }
 
-    if (password.value.length <= 6) {
-        messages.push('Password must be longer than 6 characters')
+     if((username.value !== rightUsername || password.value !== rightPassword)) {
+        errors.push("Username or password is incorrect");
+
+        errorElement.innerHTML = "Username or password is incorrect";
+    }
+    if(errors.length > 0){
+        errorElement.innerHTML = errors.join(', ');
+        errors = []
+    }
+    else if(errors.length === 0){
+        errorElement.innerHTML= "Login successful";
+        errorElement.style.color = "green";
     }
 
-    if (password.value.length >= 20) {
-        messages.push('Password must be less than 20 characters')
-    }
-
-    if (password.value === 'password') {
-        messages.push('Password cannot be password')
-    }
-
-    if (messages.length > 0) {
-        e.preventDefault()
-        errorElement.innerText = messages.join(', ')
-    }
-})
-
+});
