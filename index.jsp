@@ -23,7 +23,7 @@
         </div>
         <!-- list of the names tomer,elad,noa,matan,eden for a animtaion across the screen -->
         <h1>
-            Made By:
+            Project made by
         </h1>
         <div class="names">
             <div class="name">Tomer</div>
@@ -32,6 +32,10 @@
             <div class="name">Matan</div>
             <div class="name">Eden</div>
         </div>
+
+  
+        </div>
+    
     <script src="indexd.js"></script>
 </body>
 </html>
